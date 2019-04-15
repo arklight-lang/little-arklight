@@ -1,0 +1,17 @@
+{
+"cvm/deterministic": {
+    "reg-count" : 5,
+    "reg-prefix": "cr",
+    "gates"     : {
+        "not"   : [
+            [0, 1],
+            [1, 0]
+        ],
+        "and"   : [
+            [0, 0, 0, 1],
+            [1, 1, 1, 0]
+        ]
+    }
+}
+
+}
