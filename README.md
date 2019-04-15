@@ -1,4 +1,4 @@
-# Little Arklight - a programming language for teaching classical determinitic and stochastic computing and quantum computing
+# Little Arklight - circuit based programming language
 
 [![License](https://img.shields.io/badge/LICENSE-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Unitary Fund](https://img.shields.io/badge/Supported%20by-Unitary%20Fund-brightgreen.svg?style=for-the-badge)](http://unitary.fund)
