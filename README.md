@@ -77,6 +77,17 @@ circuit main() {
 
 ```
 
+## Running a preview
+
+If you wish to track progress and want to check things out, please download this repository into the directory of your choice and install the requirements.
+Once you have requirements installed, you can run the assembler as follows (assuming src/kas.py has execute permissions):
+
+```
+$ ./kas examples/program.al --directives=examples/directives.json
+```
+
+Instructions for running the VM in development mode coming soon.
+
 ## Installation
 
 Once the project is completed, you will be able to download the package directly from either PyPy and/or Conda or as independent executables. Stay tuned!
