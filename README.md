@@ -9,7 +9,7 @@ But teaching quantum computing has proven a challenge for multiple reasons least
 Little Arklight is a project that aims to help developers transition from classical programming into quantum computing in a somewhat smooth manner.
 This is achieved by demonstrating how one can write classical algorithms in terms of circuits as this formalism is extensively used in quantum computing.
 
-The project is under active development so please do follow it for updates.
+The project is under active development so please do watch it for updates.
 
 ## Why Little Arklight
 
@@ -17,7 +17,7 @@ After [Avalon](https://github.com/avalon-lang) reached a respectable milestone w
 my attempts to introduce students and developers to quantum programming using Avalon were not successful.
 
 It turns out that when learners read about quantum programs online, they see a lot of linear algebra which is rarely used
-for simple algorithms and a lot of circuits which do not look like electronic circuits they are used to.
+for simple classical algorithms and a lot of circuits which do not look like electronic circuits they are used to.
 
 To bridge that gap, (Little) Arklight allows the programmer to configure the virtual machine by writing gates as matrices
 and programs that use those gates as circuits. This remains true for both classical computing and quantum computing.
@@ -35,11 +35,11 @@ The programmer begins by configuring the virtual machine(s) by specifying the nu
 This is done through the use of directives in JSON format. An example can be found at [directives sample file](examples/directives.json).
 
 Then the user writes the program as a series of circuit that will be compiled to bytecode for the VM. The assembler checks the program for correctness as well before bytecode generation.
-Once the bytecode is generated, it packaged in a ZIP file with the directives file for potential distribution and execution.
+Once the bytecode is generated, it is packaged into a ZIP file with the directives file for potential distribution and execution.
 
 Finally to run the program, the VM is invoked, passing the packaged ZIP which it reads, configures itself using the directives file then executes the bytecode displaying results if instructed to do so.
 
-This system is quite primitive compared to power of a full-fledged programming language but it is powerful enough to perform even non-trivial computations.
+This system is quite primitive compared to the power of a full-fledged programming language but it is powerful enough to perform even non-trivial computations.
 
 ## State of the project
 
@@ -48,8 +48,8 @@ The skeleton of the VM is in place and only the execution code remains to be fil
 
 ## Show me the code
 
-Using the directives in the examples folder, we configure the VM to accept use two gates as native gates, meaning everything will be written in terms of those two.
-The program below (also found in ``examples/program.al``) shows the implementation of the NAND gate and the OR gate in terms of NANDs.
+Using the directives in the examples folder, we configure the VM to accept two gates as native gates, meaning everything will be written in terms of those two.
+The program below (also found in ``examples/program.al``) shows the implementation of the NAND gate in terms of AND and NOT then the OR gate is written in terms of NANDs.
 
 ```
 // Sample program that shows a couple of circuits built from the basic gates configured for the VM.
@@ -80,11 +80,13 @@ circuit main() {
 ## Running a preview
 
 If you wish to track progress and want to check things out, please download this repository into the directory of your choice and install the requirements.
-Once you have requirements installed, you can run the assembler as follows (assuming src/kas.py has execute permissions):
+Once you have the requirements installed, you can run the assembler as follows (assuming ``src/as/kas.py`` has execute permissions):
 
 ```
-$ ./kas examples/program.al --directives=examples/directives.json
+$ ./kas.py examples/program.al --directives=examples/directives.json
 ```
+
+At the moment, it will just display the main circuit with all circuits rewritten in terms of native gates.
 
 Instructions for running the VM in development mode coming soon.
 
@@ -112,7 +114,7 @@ This code is licensed under the MIT license. Please see the LICENSE file for the
 ## Acknowledgement
 
 Development of Arklight is being supported by the [Unitary Fund](https://unitary.fund) grant.
-Thanks to [Will J. Zeng](willzeng.com) for running the program.
+Thanks to [Will J. Zeng](http://willzeng.com) for running the program.
 
 ## Copyright
 
