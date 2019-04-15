@@ -1,4 +1,4 @@
-# Little Arklight - circuit based programming language
+# Little Arklight - a circuit based programming language
 
 [![License](https://img.shields.io/badge/LICENSE-MIT-blue.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 [![Unitary Fund](https://img.shields.io/badge/Supported%20by-Unitary%20Fund-brightgreen.svg?style=for-the-badge)](http://unitary.fund)
@@ -21,6 +21,13 @@ for simple algorithms and a lot of circuits which do not look like electronic ci
 
 To bridge that gap, (Little) Arklight allows the programmer to configure the virtual machine by writing gates as matrices
 and programs that use those gates as circuits. This remains true for both classical computing and quantum computing.
+
+## What makes it little
+
+In the full blown version of Arklight, performance will be taken into consideration. Performance of the VM and performance of your program through optimizations.
+Moreover, it will include new future enabled by a configurable random access memory for both the classical VM and the quantum VM.
+
+Though the "big" Arklight is not a priority at this moment ([Avalon](https//github.com/avalon-lang) is), it is definitely something I have in mind so please stay tuned.
 
 ## How it works
 
