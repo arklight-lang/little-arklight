@@ -80,11 +80,11 @@ options = """Little Arklight assembler.
 Usage:
     kas.py <program> (-d <file> | --directives=<file>)
     kas.py (-h | --help)
-    kas.py --version
+    kas.py (-V | --version)
 
 Options:
     -h, --help                      Show this help message.
-    -V, --version                   Display version.
+    -V, --version                   Display the assembler version.
     -d <file>, --directives=<file>  Specify the directives file that details the VM configuration.
 """
 if __name__ == "__main__":
